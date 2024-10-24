@@ -86,3 +86,41 @@ int main() {
 
     return 0;
 }
+#include <stdio.h>
+
+// Function to calculate the square of a number
+int square(int num) {
+    return num * num;
+}
+
+// Function to calculate the cube of a number
+int cube(int num) {
+    return num * num * num;
+}
+
+int main() {
+    int number;
+    int choice;
+
+    // Display menu for the user
+    printf("Choose the operation: \n");
+    printf("1. Square\n");
+    printf("2. Cube\n");
+    scanf("%d", &choice);
+
+    // Ask for the number
+    printf("Enter the number: ");
+    scanf("%d", &number);
+
+    // Perform the chosen operation
+    if (choice == 1) {
+        printf("Square of %d is: %d\n", number, square(number));
+    } else if (choice == 2) {
+        printf("Cube of %d is: %d\n", number, cube(number));
+    } else {
+        printf("Invalid choice!\n");
+    }
+
+    return 0;
+}
+
