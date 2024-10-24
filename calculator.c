@@ -162,3 +162,11 @@ int main() {
     return 0;
 }
 
+double inverse(int num) {
+    if (num != 0) {            // Check if the number is not zero
+        return 1.0 / num;       // Return the inverse, 1 divided by the number
+    } else {
+        return 0;               // If the number is zero, return 0 to avoid errors
+    }
+}
+
