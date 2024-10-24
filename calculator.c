@@ -124,3 +124,41 @@ int main() {
     return 0;
 }
 
+// Function to calculate the inverse of a number
+float inverse(int num) {
+    if (num == 0) {
+        printf("Inverse of 0 is undefined.\n");
+        return 0;  // return 0 to indicate invalid operation
+    }
+    return 1.0 / num;
+}
+
+int main() {
+    int number;
+    int choice;
+
+    // Display menu for the user
+    printf("Choose the operation: \n");
+    printf("1. Square\n");
+    printf("2. Cube\n");
+    printf("3. Inverse\n");
+    scanf("%d", &choice);
+
+    // Ask for the number
+    printf("Enter the number: ");
+    scanf("%d", &number);
+
+    // Perform the chosen operation
+    if (choice == 1) {
+        printf("Square of %d is: %d\n", number, square(number));
+    } else if (choice == 2) {
+        printf("Cube of %d is: %d\n", number, cube(number));
+    } else if (choice == 3) {
+        printf("Inverse of %d is: %f\n", number, inverse(number));
+    } else {
+        printf("Invalid choice!\n");
+    }
+
+    return 0;
+}
+
